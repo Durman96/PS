@@ -1,6 +1,6 @@
 script_name("plitts_safe")
-script_version("0.2")
---123123
+script_version("0.1")
+
 local enable_autoupdate = true -- false to disable auto-update + disable sending initial telemetry (server, moonloader version, script version, samp nickname, virtual volume serial number)
 local autoupdate_loaded = false
 local Update = nil
@@ -11,10 +11,10 @@ if enable_autoupdate then
         if autoupdate_loaded then
             Update.json_url = "https://raw.githubusercontent.com/Durman96/PS/main/version.json?" .. tostring(os.clock())
             Update.prefix = "[" .. string.upper(thisScript().name) .. "]: "
-            Update.url = "https://github.com/Durman96/PS/blob/main/"
+            Update.url = "https://github.com/Durman96/PS/"
         end
     end
-end
+end 
 
 local sampev	= require 'samp.events'
 local ffi 		= require 'ffi'
