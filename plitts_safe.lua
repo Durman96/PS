@@ -1,5 +1,11 @@
 script_name("plitts_safe")
-script_version("0.1")
+script_version("0.2")
+--123123
+local encoding = require 'encoding'
+
+encoding.default = 'cp1251'
+local u8 = encoding.UTF8
+local function recode(u8) return encoding.UTF8:decode(u8) end
 
 local enable_autoupdate = true -- false to disable auto-update + disable sending initial telemetry (server, moonloader version, script version, samp nickname, virtual volume serial number)
 local autoupdate_loaded = false
